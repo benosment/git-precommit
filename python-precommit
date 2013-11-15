@@ -1,0 +1,8 @@
+#!/bin/sh
+#  run pep8 on each commit
+# 
+
+FILES=$(git diff --cached --name-status | grep -v ^D | awk '$1 $2 { print $2}' | grep -e .py$)
+if [ -n "$FILES" ]; then
+    flake8 $FILES
+fi
