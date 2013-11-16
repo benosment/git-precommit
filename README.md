@@ -10,6 +10,7 @@ Copy one of the precommit scripts to the hooks subdirectory of the
 Git directory:
 
 Example:
+
     cp python-precommit .git/hooks/pre-commit
 
 
